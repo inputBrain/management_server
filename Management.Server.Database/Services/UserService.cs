@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
+using Management.Server.Core;
 using Management.Server.Database.Models.User;
 using Management.Server.Database.Repositories;
-using Management.Server.Model.Core;
 using Microsoft.Extensions.Logging;
 
 namespace Management.Server.Database.Services

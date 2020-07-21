@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Management.Server.Core;
 using Management.Server.Database.Models.User;
-using Management.Server.Model.Core;
 using Management.Server.Model.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

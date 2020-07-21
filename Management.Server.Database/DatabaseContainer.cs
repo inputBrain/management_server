@@ -1,5 +1,4 @@
 using Management.Server.Database.Repositories;
-using Microsoft.Extensions.Logging;
 
 namespace Management.Server.Database
 {

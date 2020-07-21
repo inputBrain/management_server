@@ -1,4 +1,4 @@
-namespace Management.Server.Host
+namespace Management.Server.Host.Config
 {
     public sealed class JwtSettings
     {

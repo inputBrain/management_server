@@ -1,6 +1,6 @@
 using System;
 
-namespace Management.Server.Model.Core
+namespace Management.Server.Core
 {
     public class ErrorException : Exception
     {

@@ -1,5 +1,5 @@
 using System;
-using Management.Server.Model.Core;
+using Management.Server.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
