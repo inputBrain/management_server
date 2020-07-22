@@ -24,6 +24,10 @@
       <ProjectReference Include="..\Management.Server.Database\Management.Server.Database.csproj" />
       <ProjectReference Include="..\Management.Server.Model\Management.Server.Model.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations" />
+    </ItemGroup>
     
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>

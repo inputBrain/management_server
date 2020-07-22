@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Management.Server.Host.Migrations
 {
-    public partial class coreInit : Migration
+    public partial class InitUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,9 +15,9 @@ namespace Management.Server.Host.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     CreatedAt = table.Column<DateTimeOffset>(nullable: false),
-                    Email = table.Column<string>(nullable: true),
-                    Phone = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(maxLength: 50, nullable: true),
+                    Email = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
                     Status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

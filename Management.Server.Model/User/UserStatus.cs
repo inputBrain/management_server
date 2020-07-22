@@ -2,8 +2,8 @@ namespace Management.Server.Model.User
 {
     public enum UserStatus
     {
-        Undefined = 0,
-        Ok = 1,
+        NotConfirmed = 0,
+        Confirmed = 1,
         Deleted = 2
     }
 }

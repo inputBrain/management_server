@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Management.Server.Host.Migrations
 {
     [DbContext(typeof(PostgreSqlContext))]
-    [Migration("20200709183557_coreInit")]
-    partial class coreInit
+    [Migration("20200722113043_InitUser")]
+    partial class InitUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Management.Server.Host.Migrations
                 .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("HiddenEnergy.Server.Database.Models.User.UserModel", b =>
+            modelBuilder.Entity("Management.Server.Database.Models.User.UserModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,13 +32,15 @@ namespace Management.Server.Host.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("character varying(50)")
-                        .HasMaxLength(50);
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<string>("Phone")
+                    b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Status")

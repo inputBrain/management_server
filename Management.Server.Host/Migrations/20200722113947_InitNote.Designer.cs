@@ -3,15 +3,17 @@ using System;
 using Management.Server.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Management.Server.Host.Migrations
 {
     [DbContext(typeof(PostgreSqlContext))]
-    partial class PostgreSqlContextModelSnapshot : ModelSnapshot
+    [Migration("20200722113947_InitNote")]
+    partial class InitNote
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

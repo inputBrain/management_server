@@ -86,7 +86,7 @@ namespace Management.Server.Host
 
             services.AddMvc(
                         options => { options.Filters.Add(new ErrorHandlingFilter()); })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddJsonOptions(
                     options =>
                     {
