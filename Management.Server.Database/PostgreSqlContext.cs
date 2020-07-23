@@ -7,6 +7,8 @@ namespace Management.Server.Database
 {
     public sealed class PostgreSqlContext : DbContext
     {
+        public readonly DatabaseFacade Db;
+
         public DbSet<UserModel> User { get; set; }
 
         public DbSet<NoteModel> Note { get; set; }
@@ -15,6 +17,7 @@ namespace Management.Server.Database
         public PostgreSqlContext(DbContextOptions<PostgreSqlContext> options, ILoggerFactory loggerFactory) :
             base(options)
         {
+            Db = new DatabaseFacade(this, loggerFactory);
         }
 
 
