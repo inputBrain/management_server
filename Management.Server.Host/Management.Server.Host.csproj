@@ -22,6 +22,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Management.Server.Database\Management.Server.Database.csproj" />
+      <ProjectReference Include="..\Management.Server.Message.Cms.Codec\Management.Server.Message.Cms.Codec.csproj" />
+      <ProjectReference Include="..\Management.Server.Message.Cms\Management.Server.Message.Cms.csproj" />
       <ProjectReference Include="..\Management.Server.Model\Management.Server.Model.csproj" />
     </ItemGroup>
 

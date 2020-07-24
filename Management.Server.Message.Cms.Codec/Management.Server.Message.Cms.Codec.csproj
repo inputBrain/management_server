@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Messages\Note" />
+      <Folder Include="Payload\Note" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Management.Server.Database\Management.Server.Database.csproj" />
+      <ProjectReference Include="..\Management.Server.Message.Cms\Management.Server.Message.Cms.csproj" />
+      <ProjectReference Include="..\Management.Server.Model\Management.Server.Model.csproj" />
+    </ItemGroup>
+
+</Project>

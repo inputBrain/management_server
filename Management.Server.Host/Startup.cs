@@ -225,10 +225,10 @@ namespace Management.Server.Host
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "HE Client API",
+                        Title = "Management Client API",
                         Version = "v1",
                         TermsOfService = null,
-                        Description = "Api documentation for HE Client" +
+                        Description = "Api documentation for Management Client" +
                                       "<p>All data in GMT(type : number-int)</p>" +
                                       "<p>OK Response: 200</p>" +
                                       "<p>Error response: 406</p>" +
@@ -238,9 +238,9 @@ namespace Management.Server.Host
 
                 c.SwaggerDoc("admin", new OpenApiInfo
                 {
-                    Title = "HE Admin Panel",
+                    Title = "Management Admin Panel",
                     Version = "admin",
-                    Description = "Api for HE Admin panel CMS",
+                    Description = "Api for Management Admin panel CMS",
                 });
 
                 // Set the comments path for the Swagger JSON and UI.
