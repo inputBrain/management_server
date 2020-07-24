@@ -6,7 +6,9 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Management.Server.Host
 {
-
+    /*
+     * TODO: This class was not written by me.
+     */
     public class AuthorizationOperationFilter : IOperationFilter
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)

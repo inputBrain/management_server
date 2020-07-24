@@ -14,6 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Management.Server.Host
 {
 
+    /*
+     * TODO: This class was not written by me.
+     */
     public class Program
     {
         public static void Main(string[] args)

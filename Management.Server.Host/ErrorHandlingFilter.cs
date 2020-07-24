@@ -7,6 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Management.Server.Host
 {
+    /*
+     * TODO: This class was not written by me.
+     */
     public class ErrorHandlingFilter : ExceptionFilterAttribute
     {
         public override void OnException(ExceptionContext context)

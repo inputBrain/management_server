@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Management.Server.Test
 {
+    /*
+     * TODO: This class was not written by me.
+     */
     public abstract class BaseDbTestCase : IDisposable
     {
         private readonly DbContextOptions<PostgreSqlContext> _options;

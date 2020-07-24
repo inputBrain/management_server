@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Management.Server.Database.Models;
 using Microsoft.EntityFrameworkCore;
@@ -26,48 +23,15 @@ namespace Management.Server.Database.Repositories
             Logger = loggerFactory.CreateLogger<T>();
         }
 
-
-        public IQueryable<T> SearchFor(Expression<Func<T, bool>> predicate)
-        {
-            return DbModel.Where(predicate);
-        }
-
-
         public async Task<T> FindOne(int id)
         {
             var model = await DbModel.FindAsync(id);
             return model;
         }
 
-
-        public async Task<List<T>> FindAll()
-        {
-            var collection = await DbModel.ToListAsync();
-            return collection;
-        }
-
-
-        public void Create(T entity)
-        {
-            DbModel.Add(entity);
-        }
-
-
-        public IQueryable<T> CreateEmptyQuery()
-        {
-            return DbModel.AsQueryable();
-        }
-
-
         public void Delete(T entity)
         {
             DbModel.Remove(entity);
-        }
-
-
-        public Task<List<T>> Find(Expression<Func<T, bool>> predicate)
-        {
-            return DbModel.Where(predicate).ToListAsync();
         }
 
 
@@ -87,17 +51,6 @@ namespace Management.Server.Database.Repositories
         public Task<int> UpdateModelAsync(T model)
         {
             DbModel.Update(model);
-            return Context.SaveChangesAsync();
-        }
-
-
-        public Task<int> UpdateCollectionAsync(List<T> collection)
-        {
-            foreach (var model in collection)
-            {
-                DbModel.Update(model);
-            }
-
             return Context.SaveChangesAsync();
         }
 

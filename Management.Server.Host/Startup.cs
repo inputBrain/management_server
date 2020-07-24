@@ -24,6 +24,9 @@ using Microsoft.OpenApi.Models;
 
 namespace Management.Server.Host
 {
+    /*
+     * TODO: This class was not written by me.
+     */
     public class Startup
     {
         public Startup(IConfiguration configuration)

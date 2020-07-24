@@ -10,6 +10,9 @@ using Newtonsoft.Json.Serialization;
 namespace Management.Server.Host
 {
 
+    /*
+     * TODO: This class was not written by me.
+     */
     internal class ErrorWrappingMiddleware
     {
         private readonly RequestDelegate _next;
