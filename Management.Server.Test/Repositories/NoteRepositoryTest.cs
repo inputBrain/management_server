@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Management.Server.Model.Note;
 using Management.Server.Model.User;
 using Xunit;
@@ -51,35 +50,20 @@ namespace Management.Server.Test.Repositories
                 UserStatus.Confirmed
             ).Result;
 
-            Assert.NotNull(userModel);
+            var model = Fixtures.NoteFixture.CreateNoteModel(Registry.Note, userModel);
 
             var patch = new NotePatch(
-                "Perfect note",
-                "Hello world",
-                NoteStatus.Disabled
-            );
-
-            var model = Registry.Note.CreateModel(
-                userModel.Id,
-                patch.Title,
-                patch.Description,
-                patch.NoteStatus
-            ).Result;
-
-            Task.Delay(1000).Wait();
-
-            var anotherPatch = new NotePatch(
                 "It is not a perfect note :(",
                 "Success or die",
                 NoteStatus.Published
             );
 
-            var updatedModel = Registry.Note.UpdatePatch(model, anotherPatch).Result;
+            var updatedModel = Registry.Note.UpdatePatch(model, patch).Result;
 
             Assert.NotNull(updatedModel);
-            Assert.Equal(anotherPatch.Title, updatedModel.Title);
-            Assert.Equal(anotherPatch.Description, updatedModel.Description);
-            Assert.Equal(anotherPatch.NoteStatus, updatedModel.NoteStatus);
+            Assert.Equal(patch.Title, updatedModel.Title);
+            Assert.Equal(patch.Description, updatedModel.Description);
+            Assert.Equal(patch.NoteStatus, updatedModel.NoteStatus);
         }
     }
 }
