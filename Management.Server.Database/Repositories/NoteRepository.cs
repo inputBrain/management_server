@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Management.Server.Core;
 using Management.Server.Database.Models.Note;
 using Microsoft.Extensions.Logging;
 
@@ -10,6 +12,16 @@ namespace Management.Server.Database.Repositories
         }
 
 
+        public async Task<NoteModel> GetOne(int id)
+        {
+            var model = await FindOne(id);
+            if (model == null)
+            {
+                throw new ErrorException(Error.InvalidError("Note not found"));
+            }
+
+            return model;
+        }
 
     }
 }
