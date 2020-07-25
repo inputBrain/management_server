@@ -20,5 +20,15 @@ namespace Management.Server.Host.Controllers.Admin
             var model = await Db.Note.GetOne(id);
             return SendOk(NoteMessageCodec.EncodeGetOneNote(model));
         }
+
+
+        [HttpPost]
+        [ProducesResponseType(typeof(CreateNote.Response), 200)]
+        public async Task<IActionResult> CreateNote([FromBody] CreateNote request)
+        {
+            // var user = 
+            // var userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            return null;
+        }
     }
 }
