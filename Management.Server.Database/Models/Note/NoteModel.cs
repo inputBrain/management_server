@@ -42,5 +42,23 @@ namespace Management.Server.Database.Models.Note
                 NoteStatus = noteStatus
             };
         }
+
+
+        //if this method return false, then we update model by UpdateByNotePatch method
+        public bool IsSame(NotePatch notePatch)
+        {
+            return notePatch.Title == Title &&
+                notePatch.Description == Description &&
+                notePatch.NoteStatus == NoteStatus;
+        }
+
+
+        public bool UpdateByNotePatch(NotePatch notePatch)
+        {
+            Title = notePatch.Title;
+            Description = notePatch.Description;
+            NoteStatus = notePatch.NoteStatus;
+            return true;
+        }
     }
 }

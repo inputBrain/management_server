@@ -11,7 +11,6 @@ namespace Management.Server.Message.Cms.Codec.Payload.Note
         {
             return new Cms.Payload.Note.Note(
                 dbModel.Id,
-                dbModel.AuthorId,
                 dbModel.Title,
                 dbModel.Description,
                 EncodeNoteStatus(dbModel.NoteStatus)

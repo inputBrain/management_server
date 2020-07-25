@@ -2,11 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Management.Server.Message.Cms.Payload.Note
 {
-    public class Note
+    public class NotePatch
     {
-        [Required]
-        public int Id { get; set; }
-
         [Required]
         public string Title { get; set; }
 
@@ -17,9 +14,8 @@ namespace Management.Server.Message.Cms.Payload.Note
         public NoteStatus NoteStatus { get; set; }
 
 
-        public Note(int id, string title, string description, NoteStatus noteStatus)
+        public NotePatch(string title, string description, NoteStatus noteStatus)
         {
-            Id = id;
             Title = title;
             Description = description;
             NoteStatus = noteStatus;

@@ -55,7 +55,6 @@ namespace Management.Server.Database.Repositories
         public async Task<UserModel> GetOne(int id)
         {
             var userModel = await FindOne(id);
-
             if (userModel == null)
             {
                 throw ErrorException.DbException("Get User Error. User not exist with id " + id);
